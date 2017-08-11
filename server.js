@@ -8,7 +8,15 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+app.get('/vichu-one',function(req,res){
+   res.send('vichu-one requested and will be showed');
+});
+app.get('/vichu-two',function(req,res){
+    res.send('vichu-two requested and will be showed');
+});
+app.get('vichu-three',function(req,res){
+    res.send('vichu-three requested and will be showed');
+});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
